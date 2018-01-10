@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<web-app id="WebApp_ID" version="3.0"
+   xmlns="http://java.sun.com/xml/ns/j2ee" 
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee 
+   http://java.sun.com/xml/ns/j2ee/web-app_3_0.xsd">
 <servlet>
 	<!-- Servlet的名称 -->
 	<servlet-name>springmvc</servlet-name>
@@ -11,7 +16,7 @@
 		<!-- contextConfigLocation是参数名称，该参数的值包含SpringMVC的配置文件路径 -->
 		<param-name>contextConfigLocation</param-name>
 		<param-value>/WEB-INF/springmvc-config.xml</param-value>
-	</init-param>
+	</init-param>         
 	<!-- 在web应用启动时立即加载Servlet -->
 	<load-on-starup>1</load-on-starup>
 </servlet>
@@ -22,4 +27,4 @@
 	<!-- 监听当前域的所有请求 -->
 	<url-pattern>/</url-pattern>
 </servlet-mapping>
-
+</web-app>
