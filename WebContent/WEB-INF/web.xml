@@ -1,1 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<servlet>
+	<!-- Servlet的名称 -->
+	<servlet-name>springmvc</servlet-name>
+	<!-- Servlet 对应的java类 -->
+	<servlet-class>
+		org.springframework.web.servlet.DispatherServlet
+	</servlet-class>
+	<!-- 当前Servlet的参数信息 -->
+	<init-param>
+		<!-- contextConfigLocation是参数名称，该参数的值包含SpringMVC的配置文件路径 -->
+		<param-name>contextConfigLocation</param-name>
+		<param-value>/WEB-INF/springmvc-config.xml</param-value>
+	</init-param>
+	<!-- 在web应用启动时立即加载Servlet -->
+	<load-on-starup>1</load-on-starup>
+</servlet>
+	<!-- Servlet映射声明 -->	
+<servlet-mapping>
+	<!-- 请求对应的Servlet名称 -->
+	<servlet-name>springmvc</servlet-name>
+	<!-- 监听当前域的所有请求 -->
+	<url-pattern>/</url-pattern>
+</servlet-mapping>
+
